@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7EECE2A9-100C-4A91-B603-A40EB7369245}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>POS.My.MyApplication</StartupObject>
+    <RootNamespace>POS</RootNamespace>
+    <AssemblyName>POS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>POS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>POS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.CrystalReports.Engine\10.5.3700.0__692fbea5521e1304\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.ReportSource\10.5.3700.0__692fbea5521e1304\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.Shared\10.5.3700.0__692fbea5521e1304\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class and Module\DatabaseClass.vb" />
+    <Compile Include="Class and Module\GlobalFunction.vb" />
+    <Compile Include="Class and Module\GlobalModule.vb" />
+    <Compile Include="Dialog\discountDialog.Designer.vb">
+      <DependentUpon>discountDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\discountDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\ReceiptForm.Designer.vb">
+      <DependentUpon>ReceiptForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ReceiptForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SalesTransactionDialog.Designer.vb">
+      <DependentUpon>SalesTransactionDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\SalesTransactionDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\SetupClass.vb" />
+    <Compile Include="Dialog\ProdQtyDialog.Designer.vb">
+      <DependentUpon>ProdQtyDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\ProdQtyDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\discountSetup.Designer.vb">
+      <DependentUpon>discountSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\discountSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\invoiceNumberSetup.Designer.vb">
+      <DependentUpon>invoiceNumberSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\invoiceNumberSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\loginForm.Designer.vb">
+      <DependentUpon>loginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\loginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\mainForm.Designer.vb">
+      <DependentUpon>mainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\mainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\passwordReset.Designer.vb">
+      <DependentUpon>passwordReset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\passwordReset.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\POS.Designer.vb">
+      <DependentUpon>POS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\POS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\productRegistration.Designer.vb">
+      <DependentUpon>productRegistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\productRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\stocAddition.Designer.vb">
+      <DependentUpon>stocAddition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\stocAddition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\userInformation.Designer.vb">
+      <DependentUpon>userInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\userInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\userRegistration.Designer.vb">
+      <DependentUpon>userRegistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\userRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialog\discountDialog.resx">
+      <DependentUpon>discountDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\ProdQtyDialog.resx">
+      <DependentUpon>ProdQtyDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\ReceiptForm.resx">
+      <DependentUpon>ReceiptForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SalesTransactionDialog.resx">
+      <DependentUpon>SalesTransactionDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\discountSetup.resx">
+      <DependentUpon>discountSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\invoiceNumberSetup.resx">
+      <DependentUpon>invoiceNumberSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\loginForm.resx">
+      <DependentUpon>loginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\mainForm.resx">
+      <DependentUpon>mainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\passwordReset.resx">
+      <DependentUpon>passwordReset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\POS.resx">
+      <DependentUpon>POS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\productRegistration.resx">
+      <DependentUpon>productRegistration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\stocAddition.resx">
+      <DependentUpon>stocAddition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\userInformation.resx">
+      <DependentUpon>userInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\userRegistration.resx">
+      <DependentUpon>userRegistration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
